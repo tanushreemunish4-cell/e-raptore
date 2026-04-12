@@ -1,0 +1,146 @@
+.about {
+  background: #050505;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+/* ── Visual ── */
+.visual {
+  position: relative;
+  height: 500px;
+}
+
+.visualBox {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(57, 255, 20, 0.04);
+  border: 1px solid rgba(57, 255, 20, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigLetter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12rem;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(57, 255, 20, 0.2);
+  user-select: none;
+}
+
+.badgeFloat {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(57, 255, 20, 0.15);
+  border-radius: 10px;
+  padding: 14px 18px;
+  backdrop-filter: blur(10px);
+}
+
+.badgeTopRight    { top: 20px; right: -30px; }
+.badgeBottomLeft  { bottom: 30px; left: -30px; }
+
+.badgeNum {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #39ff14;
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+.badgeTxt {
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Pillars ── */
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.pillar {
+  background: rgba(57, 255, 20, 0.03);
+  border: 1px solid rgba(57, 255, 20, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: default;
+}
+
+.pillarIcon  { font-size: 1.4rem; margin-bottom: 8px; }
+.pillarTitle { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; color: #e0e0e0; }
+.pillarDesc  { font-size: 0.78rem; color: #555; line-height: 1.6; }
+
+/* ── Process strip ── */
+.processStrip {
+  background: #050505;
+  padding: 60px 5%;
+  border-top: 1px solid rgba(57, 255, 20, 0.06);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.06);
+}
+
+.processSteps {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processSteps::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 40px; right: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #39ff14, transparent);
+  opacity: 0.2;
+}
+
+.processStep {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.stepNum {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(57, 255, 20, 0.08);
+  border: 1px solid rgba(57, 255, 20, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: #39ff14;
+  margin: 0 auto 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.stepTitle { font-weight: 700; font-size: 0.85rem; color: #e0e0e0; margin-bottom: 6px; }
+.stepDesc  { font-size: 0.72rem; color: #444; line-height: 1.5; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid   { grid-template-columns: 1fr; }
+  .visual { display: none; }
+}
+
+@media (max-width: 768px) {
+  .pillars      { grid-template-columns: 1fr; }
+  .processSteps { flex-direction: column; gap: 2rem; }
+  .processSteps::before { display: none; }
+}

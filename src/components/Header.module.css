@@ -1,0 +1,179 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 0 5%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.15);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.navScrolled {
+  background: rgba(0, 0, 0, 0.97);
+  border-bottom-color: rgba(57, 255, 20, 0.12);
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.logoImg {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #39ff14;
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.4);
+  animation: pulseLogo 3s ease-in-out infinite;
+  mix-blend-mode: screen;   /* ← removes white background */
+};
+
+@keyframes pulseLogo {
+  0%, 100% { box-shadow: 0 0 20px rgba(57,255,20,0.4), 0 0 60px rgba(57,255,20,0.15); }
+  50%       { box-shadow: 0 0 40px rgba(57,255,20,0.7), 0 0 80px rgba(57,255,20,0.3); }
+}
+
+.logoText {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.logoAccent { color: #39ff14; }
+
+/* ── Desktop links ── */
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0;
+  height: 1px;
+  background: #39ff14;
+  transition: width 0.3s;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: #39ff14;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+/* ── CTA ── */
+.ctaBtn {
+  background: transparent;
+  border: 1.5px solid #39ff14;
+  color: #39ff14;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  background: #39ff14;
+  color: #000;
+  box-shadow: 0 0 20px rgba(57,255,20,0.4), 0 0 60px rgba(57,255,20,0.15);
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #39ff14;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ── Mobile menu ── */
+.mobileMenu {
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  background: rgba(0, 0, 0, 0.98);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 999;
+}
+
+.mobileLink {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s;
+}
+
+.mobileLink:hover,
+.mobileLinkActive {
+  color: #39ff14;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .navLinks { display: none; }
+  .ctaBtn   { display: none; }
+  .hamburger { display: flex; }
+}

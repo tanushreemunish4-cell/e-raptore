@@ -1,0 +1,97 @@
+.blogs {
+  background: #050505;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.card {
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* ── Image ── */
+.imgWrap {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.imgIcon {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cat {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: #39ff14;
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+/* ── Body ── */
+.body { padding: 24px; }
+
+.meta {
+  font-size: 0.7rem;
+  color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  line-height: 1.2;
+}
+
+.excerpt {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.readMore {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #39ff14;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
