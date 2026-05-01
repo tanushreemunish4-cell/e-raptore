@@ -1,0 +1,34 @@
+# ============================================
+# robots.txt for https://e-raptore.com
+# E-Raptore Digital Marketing Agency
+# ============================================
+
+# Allow all search engine bots
+User-agent: *
+Allow: /
+
+# Disallow any future admin or private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+
+# Allow Google's specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Allow Bing crawler
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for general bots (reduces server load)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://e-raptore.com/sitemap.xml
