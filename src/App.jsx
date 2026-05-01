@@ -1,4 +1,5 @@
 import './styles/globals.css';
+import SEO      from './components/SEO';
 import Header  from './components/Header';
 import Hero    from './components/Hero';
 import Marquee from './components/Marquee';
@@ -12,6 +13,12 @@ export default function App() {
   return (
     <>
       <Header />
+      <SEO
+        title="Dominate the Digital Landscape"
+        description="E-Raptore is a performance-driven digital marketing agency in Udaipur. We specialize in SEO, Google Ads, Social Media Marketing, and Web Development."
+        keywords="digital marketing agency Udaipur, SEO services Rajasthan, Google Ads, performance marketing, social media marketing India"
+        url="https://e-raptore.com"
+      />
       <main>
         <Hero />
         <Marquee />
