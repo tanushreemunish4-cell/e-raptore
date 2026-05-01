@@ -57,9 +57,9 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1 className={styles.title} {...fadeUp(0.2)}>
-          <span className={styles.line1}>DOMINATE</span>
-          <span className={styles.line2}>THE DIGITAL</span>
-          <span className={styles.line3}>LANDSCAPE</span>
+          <span className={styles.line1}>DOMINATE </span>
+          <span className={styles.line2}>THE DIGITAL </span>
+          <span className={styles.line3}>LANDSCAPE </span>
         </motion.h1>
 
         <motion.p className={styles.sub} {...fadeUp(0.4)}>
