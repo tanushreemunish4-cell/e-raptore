@@ -44,8 +44,7 @@ export default function Header() {
     >
       {/* Logo */}
       <button className={styles.logo} onClick={() => scrollTo('home')}>
-        {/* REPLACE WITH THIS */}
-<img src={logo} alt="E-Raptore Logo" className={styles.logoImg} />
+      <img src={logo} alt="E-Raptore Logo" className={styles.logoImg} />
 <span className={styles.logoText}>E-<span className={styles.logoAccent}>RAPTORE</span></span>
       </button>
 

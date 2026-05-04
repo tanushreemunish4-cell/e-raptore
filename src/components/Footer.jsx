@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 
 const quickLinks  = ['Home', 'About Us', 'Services', 'Blogs', 'Contact'];
 const serviceLinks = ['SEO Optimization', 'Performance Marketing', 'Social Media', 'Google Ads', 'Web Development'];
-const contactLinks = ['hello@e-raptore.com', '+91 98765 43210', 'Jodhpur, Rajasthan', 'Free Consultation'];
+const contactLinks = ['tanushree.ffdl@gmail.com', '+91 97826 42575', 'Udaipur, Rajasthan', 'Free Consultation'];
 const socials = ['📸', '💼', '🐦', '▶️', '👍'];
 
 const sectionIds = { 'Home': 'home', 'About Us': 'about', 'Services': 'services', 'Blogs': 'blogs', 'Contact': 'contact' };
@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <button className={styles.logo} onClick={() => scrollTo('home')}>
-            <span className={styles.logoIcon}>🦅</span>
+            <img src={logo} alt="E-Raptore Logo" className={styles.logoImg} />
             <span className={styles.logoText}>E-<span className={styles.accent}>RAPTORE</span></span>
           </button>
           <p className={styles.brandDesc}>
