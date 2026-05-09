@@ -24,7 +24,7 @@ function FadeUp({ children, delay = 0, className = '' }) {
 }
 
 const contactDetails = [
-  { icon: '📧', label: 'Email Us',  text: 'tanushree.ffdl@gmail.com' },
+  { icon: '📧', label: 'Email Us',  text: 'helloeraptore@gmail.com' },
   { icon: '📞', label: 'Call Us',   text: '+91 9782642575' },
   { icon: '📍', label: 'Location',  text: 'Udaipur, Rajasthan, India' },
 ];

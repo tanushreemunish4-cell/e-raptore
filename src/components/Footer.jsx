@@ -5,7 +5,7 @@ import logo from '../assets/e-raptore.png'
 
 const quickLinks  = ['Home', 'About Us', 'Services', 'Blogs', 'Contact'];
 const serviceLinks = ['SEO Optimization', 'Performance Marketing', 'Social Media', 'Google Ads', 'Web Development'];
-const contactLinks = ['tanushree.ffdl@gmail.com', '+91 97826 42575', 'Udaipur, Rajasthan', 'Free Consultation'];
+const contactLinks = ['helloeraptore@gmail.com', '+91 97826 42575', 'Udaipur, Rajasthan', 'Free Consultation'];
 const socials = ['📸', '💼', '🐦', '▶️', '👍'];
 
 const sectionIds = { 'Home': 'home', 'About Us': 'about', 'Services': 'services', 'Blogs': 'blogs', 'Contact': 'contact' };
