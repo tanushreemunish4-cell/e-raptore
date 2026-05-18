@@ -5,8 +5,9 @@ import styles from './Contact.module.css';
 // ─────────────────────────────────────────────────────────────
 
 // Read the Web3Forms access key from Vite env (`VITE_WEB3FORMS_KEY`).
-// Falls back to the existing key if the env var isn't set yet.
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || 'fbdcb439-e343-4cfb-baaa-07141519e1b3';
+// Require the env var to be defined in local `.env` or your deployment.
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+if (!WEB3FORMS_KEY) console.warn('VITE_WEB3FORMS_KEY is not set; contact form will fail.');
 // ─────────────────────────────────────────────────────────────
 
 function FadeUp({ children, delay = 0, className = '' }) {
