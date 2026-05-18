@@ -3,8 +3,10 @@ import { motion, useInView } from 'framer-motion';
 import styles from './Contact.module.css';
 
 // ─────────────────────────────────────────────────────────────
-// 👇 PASTE YOUR WEB3FORMS ACCESS KEY HERE (from web3forms.com)
-const WEB3FORMS_KEY = 'fa9c30f9-5089-4107-bb07-f6289c3dd59c';
+
+// Read the Web3Forms access key from Vite env (`VITE_WEB3FORMS_KEY`).
+// Falls back to the existing key if the env var isn't set yet.
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || 'fbdcb439-e343-4cfb-baaa-07141519e1b3';
 // ─────────────────────────────────────────────────────────────
 
 function FadeUp({ children, delay = 0, className = '' }) {
