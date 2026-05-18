@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import styles from './Footer.module.css';
-import logo from '../assets/e-raptore.png'
+import logo from '../assets/logo1.png'
 
 const quickLinks  = ['Home', 'About Us', 'Services', 'Blogs', 'Contact'];
 const serviceLinks = ['SEO Optimization', 'Performance Marketing', 'Social Media', 'Google Ads', 'Web Development'];

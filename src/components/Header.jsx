@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css'
-import logo from '../assets/e-raptore.png';
+import logo from '../assets/logo1.png';
 
 const navItems = [
   { label: 'Home',     id: 'home' },
