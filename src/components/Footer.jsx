@@ -27,7 +27,7 @@ export default function Footer() {
         <div>
           <button className={styles.logo} onClick={() => scrollTo('home')}>
             <img src={logo} alt="E-Raptore Logo" className={styles.logoImg} />
-            <span className={styles.logoText}>E-<span className={styles.accent}>RAPTORE</span></span>
+            <span className={styles.logoText}>E-<span className={styles.accent}>Raptore</span></span>
           </button>
           <p className={styles.brandDesc}>
             A performance-driven digital marketing agency built to scale your brand
